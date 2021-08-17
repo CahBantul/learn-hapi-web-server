@@ -47,6 +47,15 @@ const routes = [
       return `Hello ${user}`;
     },
   },
+
+  {
+    method: 'POST',
+    path: '/login',
+    handler: (req, h) => {
+      const { username, password } = req.payload;
+      return `selamat datang ${username}`;
+    },
+  },
 ];
 
 module.exports = routes;
